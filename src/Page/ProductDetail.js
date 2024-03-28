@@ -19,7 +19,8 @@ const ProductDetail = () => {
 
   useEffect(() => {
     getProductDetail()
-  }, [])
+  }, []);
+
   if (loading || product == null) return <h1>Loading</h1>;
   return (
     <Container>

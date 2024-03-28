@@ -4,13 +4,7 @@ import ProductDetail from "../Page/ProductDetail";
 import { useLocation } from "react-router";
 
 const PrivateRoute = ({ authenticate }) => {
-  const location = useLocation();
-  console.log("lll", location);
-  return authenticate ? ( 
-    <ProductDetail />
-  ) : (
-    <Navigate to="/login" replace state={{ to: location }} />
-  );
+  return authenticate == true? <ProductDetail />: <Navigate to="/login" />;
 };
 
 export default PrivateRoute;

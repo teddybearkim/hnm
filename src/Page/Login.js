@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 // form 에서 event.preventDefault() 쓰면 페이지가 리프레쉬 되는걸 막아준다!
 
-const Login = ({ setAuthenticate, to }) => {
+const Login = ({ setAuthenticate }) => {
   const navigate = useNavigate();
   const loginUser = (event) => {
     event.preventDefault();

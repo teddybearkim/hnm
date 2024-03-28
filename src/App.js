@@ -17,7 +17,7 @@ import PrivateRoute from "./route/PrivateRoute";
 //7. 로그아웃이 되면 상품디테일 페이지를 볼 수 없다. 다시 로그인페이지가 보여진다.
 //8. 로그인을 하면 로그아웃이 보이고 로그아웃을 하면 로그인이 보인다.
 function App() {
-  const [authenticate, setAuthenticate] = useState(false) // true면 로그인이 안댐
+  const [authenticate, setAuthenticate] = useState(false) // true면 로그인이 ok // false 로그인 x
   return (
     <div>
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />

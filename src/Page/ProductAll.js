@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 
 const ProductAll = () => {
-  const [products, setProductList] = useState([])
+  const [products, setProductList] = useState([]);
   const getProducts = async () => {
     let url = `https://my-json-server.typicode.com/<teddybearkim>/<hnm>/products `
     let response = await fetch(url);
@@ -15,19 +15,16 @@ const ProductAll = () => {
     getProducts()
   }, [])
   return (
-
     <Container>
       <Row>
-        {products.map((item) => (
-          <Col lg={3}>
+        {Array.isArray(products) && products.map((item) => (
+          <Col lg={3} key={item.id}>
             <ProductCard item={item} />
           </Col>
         ))}
-
       </Row>
     </Container>
-
-  )
+  );
 }
 
 export default ProductAll
